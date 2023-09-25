@@ -34,10 +34,14 @@
         <script>
             start()
             const gsSpr = new invSprite("Images/Gs",".png",9,true,7,"GS")
+            const ldSpr = new invSprite("Images/livid_dagger",".png",9,true,7,"LD")
             const s1 = document.querySelector("#slot1")
+            const s2 = document.querySelector("#slot2")
             gsSpr.add(s1)
+            ldSpr.add(s2)
             function anim() {
                 gsSpr.frameUpd()
+                ldSpr.frameUpd()
                 requestAnimationFrame(anim)
             }
             anim()

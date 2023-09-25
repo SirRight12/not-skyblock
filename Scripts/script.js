@@ -24,6 +24,7 @@ class invSprite {
       this.frame = 0
     }
     this.domElement = document.createElement("img")
+    this.domElement.className = "item"
     this.domElement.id = id
     this.parent = NaN
   }
