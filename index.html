@@ -1,0 +1,46 @@
+<html>
+    <head> 
+    <title>bozo</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="Scripts/style.css">
+    </head>
+    <body>
+        <!--<button onclick="start() + this.remove()">Generate World</button> -->
+        <script src="Scripts/FPS.js"> </script>
+        <script src="Three.js%20stuff/Clock.js"> </script>
+        <script src="Three.js%20stuff/vars.js"></script>
+        <script src="Three.js%20stuff/files.js"></script>
+        <script src="Three.js%20stuff/three.js"></script>
+        <script src="Three.js%20stuff/GLTFLoader.js"></script>
+        <script src="Three.js stuff/movement.js"></script>
+        <script src="Scripts/text.js"></script>
+        <script src="Scripts/damageCalc.js"></script>
+        <script src="Scripts/script.js"></script>
+        <div id="hotslots">
+            <div id="border">
+                <div class="hotbarslot" id="slot1"></div>
+                <div class="hotbarslot" id="slot2"></div>
+                <div class="hotbarslot" id="slot3"></div>
+                <div class="hotbarslot" id="slot4"></div>
+                <div class="hotbarslot" id="slot5"></div>
+                <div class="hotbarslot" id="slot6"></div>
+                <div class="hotbarslot" id="slot7"></div>
+                <div class="hotbarslot" id="slot8"></div>
+                <div class="hotbarslot" id="slot9"></div>
+            </div>
+        </div>
+        <script>
+            start()
+            const gsSpr = new invSprite("Gs",".png",9,true,7,"GS")
+            const s1 = document.querySelector("#slot1")
+            gsSpr.add(s1)
+            function anim() {
+                gsSpr.frameUpd()
+                requestAnimationFrame(anim)
+            }
+            anim()
+        </script>
+    </body>
+</html>

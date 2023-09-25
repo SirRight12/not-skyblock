@@ -1,0 +1,111 @@
+html, body {
+    margin: 0px;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div {
+   background: black;
+   width: 50%;
+   height: 50%;
+   z-index: 1;
+   position: absolute;
+   color: white;
+   display: flex;
+}
+#dmgText {
+    font-family: 'Orbitron', sans-serif;
+}
+html,body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    color: rgb(250, 116, 6);
+    font-size: 275%;
+    position: absolute;
+    font-family: cursive;
+    z-index: 2;
+}
+.loading {
+    animation-name: rotatetext;
+    bottom: 20%;
+    color: rgb(20 255 0);
+   rotate: 10deg;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+canvas {
+    position: absolute;
+    z-index: 0;
+}
+* {
+    user-select: none;
+}
+.timer {
+   top: 0%;
+   animation-name: rotatetext;
+   rotate: 10deg;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.loadingdisplay {
+   top: 20%;
+   animation-name: rotatetext;
+   rotate: 10deg;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#mouselock {
+    background: red;
+    z-index: 2;
+    width: 1%;
+    height: 1.5%;
+}
+@keyframes rotatetext {
+    25% {rotate: -10deg}
+    50% {rotate: 10deg;}
+    75% {rotate: -10deg;}
+    100% {rotate: 10deg;}
+}
+#hotslots {
+    width: 40%;
+    height: 10%;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    background-color: #7a7a7a;
+}
+.hotbarslot {
+    width: calc(100% / 9);
+    height: 90%;
+    border-style: solid;
+    background: #e3e3e3;
+    position: relative;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hotslots #border {
+    display: flex;
+    background-color: #e3e3e3;
+    width: 98%;
+    height: 85%;
+    flex-direction: row;
+}
+.hotbarslot:hover {
+    border-color: rgb(21, 253, 0);
+}
+#GS {
+    width: 100%;
+    height: 100%;
+}
