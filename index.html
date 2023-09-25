@@ -7,8 +7,9 @@
         <link rel="stylesheet" href="Scripts/style.css">
     </head>
     <body>
-        <!--<button onclick="start() + this.remove()">Generate World</button> -->
-        <script src="Scripts/FPS.js"> </script>
+        <button onclick="init() + this.remove()">Generate World</button> 
+        <button onclick="initFolder()" id="textures">Import Custom Textures</button>
+        <script src="Scripts/FPS.js"></script>
         <script src="Three.js%20stuff/Clock.js"> </script>
         <script src="Three.js%20stuff/vars.js"></script>
         <script src="Three.js%20stuff/files.js"></script>
@@ -17,6 +18,7 @@
         <script src="Three.js stuff/movement.js"></script>
         <script src="Scripts/text.js"></script>
         <script src="Scripts/damageCalc.js"></script>
+        <script src="Three.js stuff/textureImport.js"></script>
         <script src="Scripts/script.js"></script>
         <div id="hotslots">
             <div id="border">
@@ -32,19 +34,28 @@
             </div>
         </div>
         <script>
-            start()
-            const gsSpr = new invSprite("Images/Gs",".png",9,true,7,"GS")
-            const ldSpr = new invSprite("Images/livid_dagger",".png",9,true,7,"LD")
-            const s1 = document.querySelector("#slot1")
-            const s2 = document.querySelector("#slot2")
-            gsSpr.add(s1)
-            ldSpr.add(s2)
-            function anim() {
-                gsSpr.frameUpd()
-                ldSpr.frameUpd()
-                requestAnimationFrame(anim)
+            let toy;
+            
+            const block64 = {
+                
             }
-            anim()
+            function init() {
+                const slots = document.querySelector("#hotslots")
+                slots.style.display = "flex"
+                start()
+                const gsSpr = new invSprite("Images/Gs",".png",9,true,7,"GS")
+                const ldSpr = new invSprite("Images/livid_dagger",".png",9,true,7,"LD")
+                const s1 = document.querySelector("#slot1")
+                const s2 = document.querySelector("#slot2")
+                gsSpr.add(s1)
+                ldSpr.add(s2)
+                function anim() {
+                    gsSpr.frameUpd()
+                    ldSpr.frameUpd()
+                    requestAnimationFrame(anim)
+                }
+                anim()
+            }
         </script>
     </body>
 </html>

@@ -473,7 +473,7 @@ class Chunk {
 }
   document.body.style.background = "black"
   const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,.1,50);
+    const camera = new THREE.PerspectiveCamera(75,window.innerWidth / window.innerHeight,.01,50);
     camera.velocity = {
       y: 0
     }
@@ -501,11 +501,15 @@ function onWindowResize() {
             }
 window.addEventListener("resize", onWindowResize, false);
 const textureLoader = new THREE.TextureLoader()
-const texture = textureLoader.load(file("bozo.jpg"))
-const texture2 = textureLoader.load(file("top.jpg"))
-const texture3 = textureLoader.load(file("side.jpg"))
+const grass64 = block64["grass"] || file("top.jpg")
+const dirt64 = block64["dirt"] || file("bozo.jpg")
+const stone64 = block64["stone"] || file("stone.jpg")
+const grassSide64 = block64["grass-side"] || file("side.jpg")
+const texture = textureLoader.load(dirt64)
+const texture2 = textureLoader.load(grass64)
+const texture3 = textureLoader.load(grassSide64)
 const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const stonetexture = textureLoader.load(file("stone.jpg"))
+const stonetexture = textureLoader.load(stone64)
 const irontexture = textureLoader.load(file("ironore.jpg"))
 const toplogtexture = textureLoader.load(file("oaktop.jpg"))
 const leftlogtexture = textureLoader.load(file("oakleft.jpg"))
@@ -663,7 +667,7 @@ function castGround(move,bools) {
     if (bools.strafe.bool) {
       move.strafe(camera,-bools.strafe.amt)
     }
-    camera.isInAir = false
+    console.log(camera.isInAir)
   }
   else if (distance < 1.5 - .1 && point == y) {
     const height = cameraGrounded(point)

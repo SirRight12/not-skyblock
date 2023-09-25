@@ -6,6 +6,15 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+button {
+    background-image: url(https://wallup.net/wp-content/uploads/2016/01/156574-galaxy-space-stars-Andromeda.jpg);
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+    color: white;
+    font-family: monospace;
+    font-size: xx-large;
+}
 div {
    background: black;
    width: 50%;
@@ -22,6 +31,9 @@ html,body {
     display:flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(http://38.media.tumblr.com/ecf5e8b0267e292637e8d060e828f8e1/tumblr_mm5k92WwU91s8mgkyo1_500.gif);
 }
 p {
     color: rgb(250, 116, 6);
@@ -78,10 +90,11 @@ canvas {
     width: 40%;
     height: 10%;
     bottom: 3%;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    /* display: none; */
     background-color: #7a7a7a;
 }
 .hotbarslot {
